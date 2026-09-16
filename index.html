@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sutton Houses AR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
 </head>
 
 <body>
-  <h1>🌳 Earth House AR</h1>
-  <p>Our AR experiment is working!</p>
+  <a-scene
+    mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/card.mind;"
+    color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <a-entity mindar-image-target="targetIndex: 0">
+      <a-box
+        position="0 0.5 0"
+        scale="0.4 0.4 0.4"
+        color="#7B2CBF"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+      </a-box>
+    </a-entity>
+
+  </a-scene>
 </body>
 </html>
