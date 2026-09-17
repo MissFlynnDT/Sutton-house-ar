@@ -43,54 +43,87 @@
   height="1">
 </a-image>
     <<!-- Colour burst coming out of the worksheet -->
+<!-- 3D EARTH HOUSE TREE -->
 
-<a-sphere
-  position="-0.25 0 0.10"
-  radius="0.07"
-  color="#FF5FA2"
-  animation="property: position;
-             from: -0.25 0 0.05;
-             to: -0.25 0 0.35;
-             dir: alternate;
-             loop: true;
-             dur: 1400;">
-</a-sphere>
+<a-entity position="0 -0.08 0.04">
 
-<a-sphere
-  position="0 0.15 0.10"
-  radius="0.09"
-  color="#8A4FFF"
-  animation="property: position;
-             from: 0 0.15 0.05;
-             to: 0 0.15 0.45;
-             dir: alternate;
-             loop: true;
-             dur: 1700;">
-</a-sphere>
+  <!-- Tree trunk -->
+  <a-cylinder
+    position="0 -0.10 0.14"
+    radius="0.055"
+    height="0.55"
+    color="#8B5A2B">
+  </a-cylinder>
 
-<a-sphere
-  position="0.25 -0.10 0.10"
-  radius="0.06"
-  color="#36D6C5"
-  animation="property: position;
-             from: 0.25 -0.10 0.05;
-             to: 0.25 -0.10 0.30;
-             dir: alternate;
-             loop: true;
-             dur: 1200;">
-</a-sphere>
+  <!-- Main green canopy -->
+  <a-sphere
+    position="0 0.20 0.15"
+    radius="0.22"
+    scale="1.25 0.85 0.55"
+    color="#55A85A"
+    animation="property: rotation;
+               from: 0 -2 -1;
+               to: 0 2 1;
+               dir: alternate;
+               loop: true;
+               dur: 2500;
+               easing: easeInOutSine;">
+  </a-sphere>
 
-<a-torus
-  position="0 0 0.18"
-  radius="0.28"
-  radius-tubular="0.015"
-  color="#FFD84D"
-  animation="property: rotation;
-             to: 0 0 360;
-             loop: true;
-             dur: 5000;
-             easing: linear;">
-</a-torus>
+  <!-- Left canopy -->
+  <a-sphere
+    position="-0.18 0.13 0.13"
+    radius="0.17"
+    scale="1.1 0.9 0.55"
+    color="#73BF69">
+  </a-sphere>
+
+  <!-- Right canopy -->
+  <a-sphere
+    position="0.18 0.12 0.13"
+    radius="0.17"
+    scale="1.1 0.9 0.55"
+    color="#3E9148">
+  </a-sphere>
+
+  <!-- Colourful leaves -->
+  <a-sphere
+    position="-0.18 0.23 0.31"
+    radius="0.035"
+    color="#F4D35E">
+  </a-sphere>
+
+  <a-sphere
+    position="0.15 0.25 0.32"
+    radius="0.035"
+    color="#FF8FA3">
+  </a-sphere>
+
+  <a-sphere
+    position="-0.08 0.34 0.30"
+    radius="0.035"
+    color="#8A6FD1">
+  </a-sphere>
+
+  <a-sphere
+    position="0.24 0.12 0.29"
+    radius="0.035"
+    color="#F29E4C">
+  </a-sphere>
+
+  <!-- Heart on trunk -->
+  <a-text
+    value="♥"
+    position="0 -0.08 0.205"
+    align="center"
+    color="#FF7FA5"
+    width="0.32">
+  </a-text>
+
+</a-entity>
+
+
+
 
   </a-entity>
 
